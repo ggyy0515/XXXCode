@@ -50,70 +50,66 @@
 //    [self.ipcCardView refreshUI];
     
     if (!_timeView) {
-        _timeView = [[DNVerticalTimeView alloc] init];
+        _timeView = [[DNVerticalTimeView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 350.f, SCREEN_WIDTH, 350.f)];
     }
     [self.view addSubview:_timeView];
-    [_timeView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.mas_equalTo(self.view);
-        make.height.mas_equalTo(350.f);
-    }];
-    
+
     CloudRecordModel *model1 = [[CloudRecordModel alloc] init];
     model1.chan_no = 1;
-    model1.start_time = 1499667524000;
+    model1.start_time = 1499954400000;//22
     model1.device_id = @"123";
     model1.time_len = 50000;
     model1.record_type = 2;
     
     CloudRecordModel *model2 = [[CloudRecordModel alloc] init];
     model2.chan_no = 1;
-    model2.start_time = 1499653124000;
+    model2.start_time = 1499940000000;//18
     model2.device_id = @"123";
     model2.time_len = 1050000;
     model2.record_type = 2;
     
     CloudRecordModel *model3 = [[CloudRecordModel alloc] init];
     model3.chan_no = 1;
-    model3.start_time = 1499685524000;
+    model3.start_time = 1499932800000;//16
     model3.device_id = @"123";
     model3.time_len = 550000;
     model3.record_type = 2;
     
     CloudRecordModel *model4 = [[CloudRecordModel alloc] init];
     model4.chan_no = 1;
-    model4.start_time = 1499688000000;
+    model4.start_time = 1499922000000;//13
     model4.device_id = @"123";
     model4.time_len = 850000;
     model4.record_type = 2;
     
     CloudRecordModel *model5 = [[CloudRecordModel alloc] init];
     model5.chan_no = 1;
-    model5.start_time = 1499695200000;
+    model5.start_time = 1499904000000;//8
     model5.device_id = @"123";
     model5.time_len = 950000;
     model5.record_type = 2;
     
     
     [_timeView setDatas:@[model1, model2, model3, model4, model5].mutableCopy startTime:0];
-    
-    [self performSelector:@selector(fuck) withObject:nil afterDelay:3.f];
+//
+//    [self performSelector:@selector(ggyy) withObject:nil afterDelay:3.f];
 }
 
-- (void)ggyy {
-    [_timeView scrollToScale:1499738400];
-}
-- (void)fuck {
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSTimeInterval start = 1499738400;
-        for (NSInteger i = 0; i < 100; i ++) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [_timeView scrollToScale:start];
-            });
-            start++;
-            sleep(1);
-        }
-    });
-}
+//- (void)ggyy {
+//    [_timeView scrollToScale:1499738400];
+//}
+//- (void)fuck {
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        NSTimeInterval start = 1499738400;
+//        for (NSInteger i = 0; i < 100; i ++) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [_timeView scrollToScale:start];
+//            });
+//            start++;
+//            sleep(1);
+//        }
+//    });
+//}
 
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];
