@@ -56,35 +56,35 @@
     
     CloudRecordModel *model1 = [[CloudRecordModel alloc] init];
     model1.chan_no = 1;
-    model1.start_time = 1499954400000 + 60*60*24*1000*6;//22
+    model1.start_time = 1499954400000 + 60*60*24*1000*7;//22
     model1.device_id = @"123";
     model1.time_len = 50000;
     model1.record_type = 2;
     
     CloudRecordModel *model2 = [[CloudRecordModel alloc] init];
     model2.chan_no = 1;
-    model2.start_time = 1499940000000 + 60*60*24*1000*6;//18
+    model2.start_time = 1499940000000 + 60*60*24*1000*7;//18
     model2.device_id = @"123";
     model2.time_len = 1050000;
     model2.record_type = 2;
     
     CloudRecordModel *model3 = [[CloudRecordModel alloc] init];
     model3.chan_no = 1;
-    model3.start_time = 1499932800000 + 60*60*24*1000*6;//16
+    model3.start_time = 1499932800000 + 60*60*24*1000*7;//16
     model3.device_id = @"123";
     model3.time_len = 550000;
     model3.record_type = 2;
     
     CloudRecordModel *model4 = [[CloudRecordModel alloc] init];
     model4.chan_no = 1;
-    model4.start_time = 1499922000000 + 60*60*24*1000*6;//13
+    model4.start_time = 1499922000000 + 60*60*24*1000*7;//13
     model4.device_id = @"123";
     model4.time_len = 850000;
     model4.record_type = 2;
     
     CloudRecordModel *model5 = [[CloudRecordModel alloc] init];
     model5.chan_no = 1;
-    model5.start_time = 1499904000000 + 60*60*24*1000*6;//8
+    model5.start_time = 1499904000000 + 60*60*24*1000*7;//8
     model5.device_id = @"123";
     model5.time_len = 950000;
     model5.record_type = 2;
